@@ -1,0 +1,27 @@
+class Drop {
+  
+  PImage img;
+  float x=random(width);
+  float y=random(-125,-50);
+  float yspeed=random(1,5);
+  float len=random(10,20);
+  
+  Drop(){
+   img=loadImage("Covid_2.png");
+  }
+
+  void fall() {
+    y=y+yspeed;
+    if(y>height){
+    y=random(-125,-50);
+    }
+  } 
+
+  void show() {
+    //img=loadImage("Covid_2.png");
+    image(img,x,y+len);
+           
+    //stroke(255, 255, 255);
+    //line(x, y, x, y+len);
+  }
+}
